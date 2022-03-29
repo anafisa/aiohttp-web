@@ -1,0 +1,238 @@
+.svg, svg {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: lightgrey;
+  margin: 5px;
+}
+
+.map{
+  z-index: 1;
+  display: none;
+}
+
+.cardcustom{
+  width: 80rem;
+  border: 1px solid rgba(52,19,89,.2);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(52,19,89,.2);
+  margin-bottom: 10px;
+}
+
+.login{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	/* background: rgba(0,0,0,.4); */
+  background: rgba(97,46,124,.3);
+	border-radius: 5px;
+
+	display: none;
+	z-index: 3;
+  color: #7406A4;
+}
+
+#main-login{
+	position: absolute;
+  display: none;
+	height: 100%;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23EDE1F1' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23C4BAE0'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E"); */
+  background-color: #FFFFFF;
+  background-size: cover;
+	z-index: 2;
+
+}
+
+.login h1{
+	margin:30px 100px;
+	padding: 0;
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+  color:#7406A4;
+}
+
+.input-form{
+	margin: 15px 40px;
+	text-align: center;
+  /* border: 1px solid #000000; */
+}
+
+.input-form::placeholder{
+	color: #7406A4;
+}
+
+.input-form input{
+	padding: 10px;
+	width: 270px;
+	height: 47px;
+	color:#7406A4;
+	font-size: 20px;
+	background: none;
+	outline: none;
+	border: 1px solid #7406A4;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+.input-form input[type="text"]:focus, .input-form input[type="password"]:focus{
+	border:1px solid #7406A4;
+	box-shadow: 0 0 10px #7406A4;
+}
+
+.input-form input[type="submit"]{
+	margin-top: 20px;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: none;
+	background: #7406A4;
+	transition: .3s;
+	border-radius: 5px;
+}
+
+.input-form input[type="submit"]:hover{
+	background: rgb(0,19,87);
+	cursor: pointer;
+}
+
+.close{
+	width: 20px;
+	height: 30px;
+	padding: 0px;
+	position: absolute;
+	left: 91%;
+	top:0%;
+	background: transparent;
+	border: none;
+	color:#7406A4;
+	font-size: 20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	outline: none;
+}
+
+.close:hover{
+	cursor: pointer;
+	color: #4442db;
+}
+
+
+.main {
+  background-color: #FFFFFF;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23EDE1F1' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23C4BAE0'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.buttoncustom{
+  border-radius: 5px;
+  background: #283593;
+  border-color:#283593;
+}
+
+.buttoncustom:hover{
+  cursor: pointer;
+	background: #283593;
+  border-color:#283593;
+	text-shadow: 0 0 10px #283593;
+}
+
+.buttoncustom:active{
+	background: #3F51B5;
+  border-color:#3F51B5;
+}
+
+#upbutton{
+	position: relative;
+	left: 90%;
+	color: #fff;
+	background: rgb(0,19,87);
+	outline: none;
+	border: none;
+	width: 70px;
+	height: 70px;
+	padding: 10px;
+	border-radius: 50%;
+	text-align:center;
+	z-index: 4;
+	animation: upbutton 1s infinite;
+	font-size: 30px;
+}
+
+#upbutton:hover{
+	cursor: pointer;
+	background: #283593;
+	text-shadow: 0 0 10px #283593;
+}
+
+#upbutton:active{
+	background: #3F51B5;
+}
+
+@keyframes upbutton{
+	0%{
+		box-shadow: 0 0 0 0px rgba(0,19,87,.4);
+	}
+	100%{
+		box-shadow: 0 0 0 25px rgba(0,19,87,.4);
+	}
+}
+
+
+footer{
+  width: 100%;
+	position: absolute;
+	left: 50%;
+	top:120%;
+	transform: translateX(-50%);
+	font-family: Helvetica;
+	color: #000;
+}
+
+footer h2{
+	text-align: center;
+}
+
+#footer-email{
+	position: relative;
+	top: 10%;
+	left: 24%;
+}
+
+#footer-phone{
+	position: relative;
+	top: 20%;
+	left: 24%;
+}
+
+.text{
+  font-size: 14pt;
+}
+
+.lkdata{
+  background-color: rgba(52,19,89,.1);
+  width: 500px;
+  margin-left: 100px;
+  border-radius: 10px;
+}
+
+.buttonPetitions{
+  left: 30%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+.createP{
+  margin-left: 43%;
+}
+
+.infostyles{
+  font-weight: bold;
+   font-size: 22px;
+}
