@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+<form action="/user_applications" class="row g-3" method="post">
+<div class="container-fluid main" style="min-height: 100vh; max-width:100%; padding-left: 0px; padding-right: 0px;">
+      <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #7406A4; max-width: 100%;">
+        <div class="container-fluid" style="max-width: 100%;">
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Главная</a>
+          <a class="nav-link" href="my_map.html">Карта</a>
+          <a class="nav-link" href="aboutProject.html">О Проекте</a>
+          <a class="nav-link" href="contacts.html">Контакты</a>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col">
+              <form action="log_out" >
+                  <a href="/account_page" class="btn btn-primary buttoncustom">Личный кабинет</a>
+              </form>
+          </div>
+      </div>
+    </div>
+
+    </nav>
+
+
+
+    <div class="container" style="padding-top: 50px;padding-bottom: 25px;">
+        <div class="text-center">
+            <p> </p>
+            <h2 class="display2" style="color: #7406A4">Список Ваших голосов</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="column" >
+            {% for article in applications %}
+                <div class="card cardcustom">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title text-left">{{article.location}}</h5>
+                                <p class="date"><small class="text-muted">{{article.date.strftime("%Y-%m-%d")}}</small></p>
+
+                                <div class="card-text">
+                                    <p class=""> {{article.description}}
+                                    </p>
+                                </div>
+                                <div class="card-text">
+                                    <p class=""> {{article.role}}
+                                    </p>
+                                </div>
+
+
+                                <div class="row">
+
+                                    <div class="col">
+                                        <h6 > <label style="font-weight: bold;">Количество голосов:</label> {{article.votes_number}}</h6>
+                                    </div>
+
+                                    <div class="col">
+                                        <h6 > Текущий статус: {{article.status.lower()}}</h6>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="display:flex; align-items:center;">
+                            <!-- <img src="/static/img/map1.png" alt="" style="width: 400px;" class="img-fluid rounded"> -->
+                            <!-- <img src="https://yandex.ru/maps/?ll=30.310182,59.951059&z=12&l=map"> -->
+                            <div style="width: 200px; height: 150px;">
+                                <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A053bd947d462cc1a45aeba4070defff75501905071c0eaf68436ac9976ec698c&amp;width=400&amp;height=180&amp;lang=ru_RU&amp;apikey=<API-ключ>"></script>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    </div>
+
+    <script type="text/javascript" src="/static/js/main.js"></script>
+
+  </body>
+</html>
